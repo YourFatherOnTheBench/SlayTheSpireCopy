@@ -1,0 +1,34 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Slay The Spire"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Deck="*res://Globals/Deck.gd"
+Globals="*res://Globals/Globals.gd"
+
+[display]
+
+window/size/viewport_width=1720
+window/size/viewport_height=820
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_card_layout/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

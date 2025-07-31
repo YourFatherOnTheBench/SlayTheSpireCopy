@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmieqlq78dctb"]
+
+[ext_resource type="Texture2D" uid="uid://ci4f7jbhncf02" path="res://Assets/Cards/Block.png" id="1_pyxan"]
+
+[node name="BlockCard" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(96, 0)
+texture = ExtResource("1_pyxan")

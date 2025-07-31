@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://mpliksx4j5pk"]
+
+[ext_resource type="PackedScene" uid="uid://bvkathch3m41l" path="res://Scenes/Other/Background.tscn" id="1_tlcug"]
+[ext_resource type="Texture2D" uid="uid://d2nvwm5t01dks" path="res://icon.svg" id="2_4dpyx"]
+[ext_resource type="PackedScene" uid="uid://bx00v0b1dcuhl" path="res://Scenes/Other/card_layout.tscn" id="3_3mqfk"]
+[ext_resource type="PackedScene" uid="uid://cxmnqg7h2v8y8" path="res://Scenes/Other/end_turn.tscn" id="4_iixi8"]
+[ext_resource type="PackedScene" uid="uid://uxu2fj0mfdso" path="res://Scenes/Other/DecksUI.tscn" id="5_cyadu"]
+[ext_resource type="PackedScene" uid="uid://yhprjoicliiv" path="res://Scenes/Player/player.tscn" id="6_xgxfi"]
+
+[node name="Level1" type="Node2D"]
+position = Vector2(-1, 0)
+
+[node name="Background" parent="." instance=ExtResource("1_tlcug")]
+
+[node name="Enemy" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1468, 523)
+scale = Vector2(0.585938, 2.0586)
+texture = ExtResource("2_4dpyx")
+
+[node name="CardLayout" parent="." instance=ExtResource("3_3mqfk")]
+offset_left = 262.0
+offset_top = 134.0
+offset_right = 639.0
+offset_bottom = 199.0
+
+[node name="EndTurn" parent="." instance=ExtResource("4_iixi8")]
+
+[node name="DiscardAndDrawPiles" parent="." instance=ExtResource("5_cyadu")]
+
+[node name="Player" parent="." instance=ExtResource("6_xgxfi")]
+position = Vector2(262, 589)

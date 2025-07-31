@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://uxu2fj0mfdso"]
+
+[ext_resource type="Script" uid="uid://bb2iinckjddp" path="res://Scenes/Other/discard_pile.gd" id="1_bwhyp"]
+[ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="2_go12q"]
+
+[sub_resource type="Theme" id="Theme_mdg85"]
+default_base_scale = 1.09
+
+[sub_resource type="Theme" id="Theme_ishxv"]
+default_base_scale = 1.09
+
+[node name="DiscardAndDrawPiles" type="CanvasLayer"]
+script = ExtResource("1_bwhyp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -113.0
+offset_top = -116.0
+offset_right = -73.0
+offset_bottom = -53.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = SubResource("Theme_mdg85")
+color = Color(0.74902, 0.207843, 0.337255, 1)
+
+[node name="DiscardPile" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = -27.0
+offset_right = 49.0
+offset_bottom = 1.0
+theme_override_fonts/font = ExtResource("2_go12q")
+theme_override_font_sizes/font_size = 32
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 66.0
+offset_top = -125.0
+offset_right = 106.0
+offset_bottom = -62.0
+grow_vertical = 0
+theme = SubResource("Theme_ishxv")
+color = Color(0.74902, 0.207843, 0.337255, 1)
+
+[node name="DrawPile" type="Label" parent="ColorRect2"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = -27.0
+offset_right = 49.0
+offset_bottom = 1.0
+theme_override_fonts/font = ExtResource("2_go12q")
+theme_override_font_sizes/font_size = 32

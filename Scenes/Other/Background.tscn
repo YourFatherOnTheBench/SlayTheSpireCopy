@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvkathch3m41l"]
+
+[ext_resource type="Texture2D" uid="uid://drgk6u5lvgr2s" path="res://Assets/Background/bulkhead-wallsx3.png" id="1_7adg1"]
+
+[node name="Background" type="CanvasLayer"]
+layer = -1
+
+[node name="backgroudn" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7adg1")

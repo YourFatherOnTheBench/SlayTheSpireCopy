@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://o5vvwqki3fr8"]
+
+[ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="1_0bpci"]
+[ext_resource type="Script" uid="uid://bk5pobaojkvyj" path="res://Scenes/Other/draw_pile.gd" id="1_mo15n"]
+
+[sub_resource type="Theme" id="Theme_mo15n"]
+default_base_scale = 1.09
+
+[node name="DrawPile" type="CanvasLayer"]
+script = ExtResource("1_mo15n")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 66.0
+offset_top = -125.0
+offset_right = 106.0
+offset_bottom = -62.0
+grow_vertical = 0
+theme = SubResource("Theme_mo15n")
+color = Color(0.74902, 0.207843, 0.337255, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = -27.0
+offset_right = 49.0
+offset_bottom = 1.0
+theme_override_fonts/font = ExtResource("1_0bpci")
+theme_override_font_sizes/font_size = 32

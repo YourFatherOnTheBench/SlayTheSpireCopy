@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxmnqg7h2v8y8"]
+
+[ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="1_0xxag"]
+[ext_resource type="Script" uid="uid://df184858rwnkx" path="res://Scenes/Other/end_turn.gd" id="1_jpky5"]
+
+[node name="EndTurn" type="CanvasLayer"]
+script = ExtResource("1_jpky5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 150
+
+[node name="Button" type="Button" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_0xxag")
+theme_override_font_sizes/font_size = 35
+text = "EndTurn"
+
+[connection signal="pressed" from="MarginContainer/Button" to="." method="_on_button_pressed"]

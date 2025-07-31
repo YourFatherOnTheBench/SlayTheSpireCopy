@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://drfycy04j2sg8"]
+
+[ext_resource type="Texture2D" uid="uid://hreqpys83s0y" path="res://Assets/Cards/Attack.png" id="1_p5d3a"]
+
+[node name="AttackCard" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(96, 0)
+texture = ExtResource("1_p5d3a")
