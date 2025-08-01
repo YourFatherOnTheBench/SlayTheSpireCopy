@@ -1,6 +1,7 @@
 extends Node
 class_name Enemy
 
+var maxHP: int
 var HP: int
 var Strentgh: int
 var basic_attack: int

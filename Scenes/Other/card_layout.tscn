@@ -1,7 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://bx00v0b1dcuhl"]
+[gd_scene load_steps=6 format=3 uid="uid://bx00v0b1dcuhl"]
 
 [ext_resource type="Script" uid="uid://1ipwmurf4bsi" path="res://addons/godot_card_layout/layouts/hand_layout/gcard_hand_layout.gd" id="1_ct466"]
 [ext_resource type="Script" uid="uid://capmk3cocnl8b" path="res://Scenes/Other/card_layout.gd" id="1_hi3wk"]
+
+[sub_resource type="Animation" id="Animation_l1vjk"]
+resource_name = "CardPlayed"
+length = 0.4
+
+[sub_resource type="Animation" id="Animation_0de0k"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dmdxi"]
+_data = {
+&"CardPlayed": SubResource("Animation_l1vjk"),
+&"RESET": SubResource("Animation_0de0k")
+}
 
 [node name="CardLayout" type="Control"]
 layout_mode = 3
@@ -32,5 +45,10 @@ hover_padding = 10.0
 hover_relative_position = Vector2(0, -75)
 enable_dragging = true
 metadata/_custom_type_script = "uid://1ipwmurf4bsi"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_dmdxi")
+}
 
 [connection signal="card_dragging_finished" from="GCardHandLayout" to="." method="_Used_Card"]

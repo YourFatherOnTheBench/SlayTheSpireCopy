@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo2wpqyw7mpo0"]
+
+[ext_resource type="Script" uid="uid://bhjbybh5e4dbh" path="res://Scenes/Enemies/testEnemy/enemy(idk).gd" id="1_cub1t"]
+[ext_resource type="Texture2D" uid="uid://d2nvwm5t01dks" path="res://icon.svg" id="2_xcrpp"]
+[ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="3_oneh6"]
+
+[node name="Enemy(idk)" type="Node2D"]
+script = ExtResource("1_cub1t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.5, -52.5)
+scale = Vector2(0.601563, 1.82031)
+texture = ExtResource("2_xcrpp")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -26.0
+offset_top = 73.0
+offset_right = 27.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("3_oneh6")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1

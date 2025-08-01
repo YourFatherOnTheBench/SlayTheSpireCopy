@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://yhprjoicliiv"]
+[gd_scene load_steps=4 format=3 uid="uid://yhprjoicliiv"]
 
 [ext_resource type="Texture2D" uid="uid://d2nvwm5t01dks" path="res://icon.svg" id="1_uvnfx"]
+[ext_resource type="Script" uid="uid://cxriv81fl54ku" path="res://Scenes/Player/player.gd" id="1_xpcdj"]
 [ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="2_a3d8c"]
 
 [node name="Player" type="Node2D"]
+script = ExtResource("1_xpcdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -54.5)
