@@ -12,7 +12,7 @@ position = Vector2(0, -54.5)
 scale = Vector2(1, 1.85156)
 texture = ExtResource("1_uvnfx")
 
-[node name="Label" type="Label" parent="."]
+[node name="HP" type="Label" parent="."]
 offset_left = -59.0
 offset_top = 87.0
 offset_right = 55.0

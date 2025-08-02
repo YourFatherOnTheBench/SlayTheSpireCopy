@@ -7,5 +7,15 @@ var CardsIDs = {1: preload("res://Scenes/Cards/Attack/attack_card.tscn"),
 
 var deck = [1,1,1,1,1,100,100,100,100,100]
 var DiscardPile = []
+	#get:
+		#return DiscardPile
+	#set(value):
+		#DiscardPile = value
+		#Globals.UpdateUI.emit()
 var Hand = []
 var DrawPile = []
+	#get:
+		#return DiscardPile
+	#set(value):
+		#DrawPile = value
+		#Globals.UpdateUI.emit()

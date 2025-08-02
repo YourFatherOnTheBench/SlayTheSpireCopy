@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://caflt86a831go"]
 
-[ext_resource type="Script" uid="uid://bb2iinckjddp" path="res://Scenes/Other/discard_pile.gd" id="1_mdg85"]
-[ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="1_u7p1j"]
+[ext_resource type="Script" uid="uid://bb2iinckjddp" path="res://Scenes/Other/discard_pile.gd" id="1_6w3k5"]
+[ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="2_8px0f"]
 
 [sub_resource type="Theme" id="Theme_mdg85"]
 default_base_scale = 1.09
@@ -10,7 +10,7 @@ default_base_scale = 1.09
 default_base_scale = 1.09
 
 [node name="DiscardAndDrawPiles" type="CanvasLayer"]
-script = ExtResource("1_mdg85")
+script = ExtResource("1_6w3k5")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 3
@@ -33,7 +33,7 @@ offset_left = 7.0
 offset_top = -27.0
 offset_right = 49.0
 offset_bottom = 1.0
-theme_override_fonts/font = ExtResource("1_u7p1j")
+theme_override_fonts/font = ExtResource("2_8px0f")
 theme_override_font_sizes/font_size = 32
 
 [node name="ColorRect2" type="ColorRect" parent="."]
@@ -54,5 +54,5 @@ offset_left = 7.0
 offset_top = -27.0
 offset_right = 49.0
 offset_bottom = 1.0
-theme_override_fonts/font = ExtResource("1_u7p1j")
+theme_override_fonts/font = ExtResource("2_8px0f")
 theme_override_font_sizes/font_size = 32

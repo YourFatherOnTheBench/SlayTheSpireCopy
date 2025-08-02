@@ -7,4 +7,9 @@ func _ready() -> void:
 	maxHP = 80
 	Strentgh = 0
 	basic_attack = 8 + Strentgh
-	$Label.text = str(HP) + "/" + str(maxHP)
+	$HP.text = str(HP) + "/" + str(maxHP)
+	Globals.Attack_Enemy.connect(take_hit)
+	
+
+
+	
