@@ -14,8 +14,19 @@ var HP: int:
 		
 var Strentgh: int
 var basic_attack: int
+var block: int = 0
+
+func gain_block(value: int):
+	block += value
 
 
+func Attack_player(value: int):
+	Globals.PlayerAttacked.emit(value)
+	
+
+func gain_strentgh(value: int):
+	Strentgh += value
+	basic_attack += Strentgh
 
 func take_hit(dmg: int):
 	HP -= dmg

@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://mpliksx4j5pk"]
+[gd_scene load_steps=9 format=3 uid="uid://mpliksx4j5pk"]
 
 [ext_resource type="Script" uid="uid://pqv8do2o18cn" path="res://Scenes/Levels/level_1.gd" id="1_5f3p6"]
 [ext_resource type="PackedScene" uid="uid://bvkathch3m41l" path="res://Scenes/Other/Background.tscn" id="1_tlcug"]
 [ext_resource type="PackedScene" uid="uid://bx00v0b1dcuhl" path="res://Scenes/Other/card_layout.tscn" id="3_3mqfk"]
 [ext_resource type="PackedScene" uid="uid://cxmnqg7h2v8y8" path="res://Scenes/Other/end_turn.tscn" id="4_iixi8"]
-[ext_resource type="PackedScene" uid="uid://uxu2fj0mfdso" path="res://Scenes/Other/DecksUI.tscn" id="5_cyadu"]
+[ext_resource type="PackedScene" uid="uid://caflt86a831go" path="res://Scenes/Other/Draw_and_Discard.tscn" id="5_5f3p6"]
 [ext_resource type="PackedScene" uid="uid://bo2wpqyw7mpo0" path="res://Scenes/Enemies/testEnemy/enemy(idk).tscn" id="6_5f3p6"]
 [ext_resource type="PackedScene" uid="uid://yhprjoicliiv" path="res://Scenes/Player/player.tscn" id="6_xgxfi"]
+[ext_resource type="PackedScene" uid="uid://bcjakdd00882b" path="res://Scenes/Other/Energy/energy.tscn" id="8_jv26f"]
 
 [node name="Level1" type="Node2D"]
 position = Vector2(-1, 0)
@@ -22,7 +23,7 @@ offset_bottom = 199.0
 
 [node name="EndTurn" parent="." instance=ExtResource("4_iixi8")]
 
-[node name="DiscardAndDrawPiles" parent="." instance=ExtResource("5_cyadu")]
+[node name="DiscardAndDrawPiles" parent="." instance=ExtResource("5_5f3p6")]
 
 [node name="Player" parent="." instance=ExtResource("6_xgxfi")]
 position = Vector2(253, 603)
@@ -31,3 +32,5 @@ position = Vector2(253, 603)
 
 [node name="Enemy(idk)" parent="Enemies" instance=ExtResource("6_5f3p6")]
 position = Vector2(1517, 605)
+
+[node name="Energy" parent="." instance=ExtResource("8_jv26f")]

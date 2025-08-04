@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://caflt86a831go"]
 
-[ext_resource type="Script" uid="uid://bb2iinckjddp" path="res://Scenes/Other/discard_pile.gd" id="1_6w3k5"]
+[ext_resource type="Script" uid="uid://d0v31jedhi4iv" path="res://Scenes/Other/Draw_and_discard.gd" id="1_6w3k5"]
 [ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="2_8px0f"]
 
 [sub_resource type="Theme" id="Theme_mdg85"]

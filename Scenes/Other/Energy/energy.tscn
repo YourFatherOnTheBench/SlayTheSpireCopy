@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcjakdd00882b"]
+
+[ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="1_58mri"]
+[ext_resource type="Script" uid="uid://dv2plh8sytnvo" path="res://Scenes/Other/Energy/energy.gd" id="1_frtnr"]
+
+[node name="Energy" type="CanvasLayer"]
+script = ExtResource("1_frtnr")
+
+[node name="CurrentEnergy" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 169.0
+offset_top = -99.0
+offset_right = 209.0
+offset_bottom = -43.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_58mri")
+theme_override_font_sizes/font_size = 64

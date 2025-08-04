@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://coyk25285cvmj"]
+
+[sub_resource type="Environment" id="Environment_2hqxo"]
+glow_enabled = true
+glow_intensity = 1.5
+glow_bloom = 0.4
+glow_hdr_luminance_cap = 16.0
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_2hqxo")

@@ -4,6 +4,9 @@ var CardsIDs = {1: preload("res://Scenes/Cards/Attack/attack_card.tscn"),
 				100: preload("res://Scenes/Cards/Defense/defense_card.tscn")
 				}
 
+var EnergyCosts = {1: 1, 100: 1} # id and then energy costs
+
+
 
 var deck = [1,1,1,1,1,100,100,100,100,100]
 var DiscardPile = []

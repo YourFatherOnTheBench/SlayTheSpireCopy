@@ -24,10 +24,18 @@ var dexterity: int = 0
 func _ready() -> void:
 	Globals.UsedCard.connect(CardPlayed)
 	Globals.start_of_turn.connect(turn_started)
+	Globals.PlayerAttacked.connect(get_hit)
 
 
 func CardPlayed(id: int):
 	Cards(id)
+
+
+func get_hit(value: int):
+	block -= value
+	value -= block
+	if value > 0 :
+		health -= value
 
 
 func gainBlock(value: int):
