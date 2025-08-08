@@ -32,8 +32,9 @@ func CardPlayed(id: int):
 
 
 func get_hit(value: int):
-	block -= value
+	var dmg = value
 	value -= block
+	block -= dmg
 	if value > 0 :
 		health -= value
 

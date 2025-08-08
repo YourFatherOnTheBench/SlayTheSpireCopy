@@ -1,16 +1,47 @@
-[gd_scene load_steps=4 format=3 uid="uid://bo2wpqyw7mpo0"]
+[gd_scene load_steps=9 format=3 uid="uid://bo2wpqyw7mpo0"]
 
 [ext_resource type="Script" uid="uid://bhjbybh5e4dbh" path="res://Scenes/Enemies/testEnemy/enemy(idk).gd" id="1_cub1t"]
-[ext_resource type="Texture2D" uid="uid://d2nvwm5t01dks" path="res://icon.svg" id="2_xcrpp"]
 [ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="3_oneh6"]
+[ext_resource type="Texture2D" uid="uid://mhka4ajw4dia" path="res://Assets/SpritesSheets/Enemies/Monsters_Creatures_Fantasy/Mushroom/Idle.png" id="3_pgfnj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsjws"]
+atlas = ExtResource("3_pgfnj")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4v5i"]
+atlas = ExtResource("3_pgfnj")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isp3d"]
+atlas = ExtResource("3_pgfnj")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mw70o"]
+atlas = ExtResource("3_pgfnj")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7fare"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tsjws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4v5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isp3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mw70o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
 
 [node name="Enemy(idk)" type="Node2D"]
 script = ExtResource("1_cub1t")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.5, -52.5)
-scale = Vector2(0.601563, 1.82031)
-texture = ExtResource("2_xcrpp")
 
 [node name="HP" type="Label" parent="."]
 offset_left = -26.0
@@ -20,3 +51,18 @@ offset_bottom = 96.0
 theme_override_fonts/font = ExtResource("3_oneh6")
 theme_override_font_sizes/font_size = 32
 horizontal_alignment = 1
+
+[node name="turn" type="Label" parent="."]
+offset_left = -40.0
+offset_top = -254.0
+offset_bottom = -227.0
+theme_override_fonts/font = ExtResource("3_oneh6")
+theme_override_font_sizes/font_size = 30
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -136)
+scale = Vector2(-6, 6)
+sprite_frames = SubResource("SpriteFrames_7fare")
+autoplay = "default"
+frame_progress = 0.510835
+metadata/_edit_lock_ = true

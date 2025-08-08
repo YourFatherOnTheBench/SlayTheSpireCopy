@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://df184858rwnkx" path="res://Scenes/Other/end_turn.gd" id="1_jpky5"]
 
 [node name="EndTurn" type="CanvasLayer"]
+layer = -1
 script = ExtResource("1_jpky5")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

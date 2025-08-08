@@ -26,11 +26,11 @@ offset_bottom = 199.0
 [node name="DiscardAndDrawPiles" parent="." instance=ExtResource("5_5f3p6")]
 
 [node name="Player" parent="." instance=ExtResource("6_xgxfi")]
-position = Vector2(253, 603)
+position = Vector2(316, 606)
 
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Enemy(idk)" parent="Enemies" instance=ExtResource("6_5f3p6")]
-position = Vector2(1517, 605)
+position = Vector2(1479, 647)
 
 [node name="Energy" parent="." instance=ExtResource("8_jv26f")]

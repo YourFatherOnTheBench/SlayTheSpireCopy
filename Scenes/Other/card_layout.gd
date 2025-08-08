@@ -10,11 +10,12 @@ func _ready() -> void:
 	
 	
 	
-	Deck.DrawPile = Deck.deck
+	Deck.DrawPile = Deck.deck.duplicate()
 	Deck.DiscardPile = []
 	Deck.Hand = []
 	draw_cards()
-
+	print(Deck.DrawPile)
+	
 		
 	
 

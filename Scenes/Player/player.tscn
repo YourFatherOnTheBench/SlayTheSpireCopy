@@ -1,16 +1,68 @@
-[gd_scene load_steps=4 format=3 uid="uid://yhprjoicliiv"]
+[gd_scene load_steps=12 format=3 uid="uid://yhprjoicliiv"]
 
-[ext_resource type="Texture2D" uid="uid://d2nvwm5t01dks" path="res://icon.svg" id="1_uvnfx"]
 [ext_resource type="Script" uid="uid://cxriv81fl54ku" path="res://Scenes/Player/player.gd" id="1_xpcdj"]
 [ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="2_a3d8c"]
+[ext_resource type="Texture2D" uid="uid://kxy5ywa46sub" path="res://Assets/SpritesSheets/player/playersspirtes/Sprites/without_outline/IDLE.png" id="3_xpcdj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtuoh"]
+atlas = ExtResource("3_xpcdj")
+region = Rect2(0, 0, 96, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htcer"]
+atlas = ExtResource("3_xpcdj")
+region = Rect2(96, 0, 96, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd0ac"]
+atlas = ExtResource("3_xpcdj")
+region = Rect2(192, 0, 96, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0u5uq"]
+atlas = ExtResource("3_xpcdj")
+region = Rect2(288, 0, 96, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlvik"]
+atlas = ExtResource("3_xpcdj")
+region = Rect2(384, 0, 96, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gk6dx"]
+atlas = ExtResource("3_xpcdj")
+region = Rect2(480, 0, 96, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhyir"]
+atlas = ExtResource("3_xpcdj")
+region = Rect2(576, 0, 96, 84)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_74mp2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtuoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htcer")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dd0ac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0u5uq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlvik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gk6dx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhyir")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_xpcdj")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -54.5)
-scale = Vector2(1, 1.85156)
-texture = ExtResource("1_uvnfx")
 
 [node name="HP" type="Label" parent="."]
 offset_left = -59.0
@@ -21,3 +73,10 @@ theme_override_fonts/font = ExtResource("2_a3d8c")
 theme_override_font_sizes/font_size = 32
 text = "80/80"
 horizontal_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -40)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_74mp2")
+autoplay = "default"
+frame_progress = 0.730166

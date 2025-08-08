@@ -4,6 +4,7 @@ func _ready() -> void:
 	update(-1)
 	Globals.UsedCard.connect(update)
 	Globals.start_of_turn.connect(start_of_turn)
+	start_of_turn()
 	
 	
 	

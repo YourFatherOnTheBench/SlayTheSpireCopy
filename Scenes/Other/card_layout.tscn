@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bx00v0b1dcuhl"]
+[gd_scene load_steps=7 format=3 uid="uid://bx00v0b1dcuhl"]
 
 [ext_resource type="Script" uid="uid://1ipwmurf4bsi" path="res://addons/godot_card_layout/layouts/hand_layout/gcard_hand_layout.gd" id="1_ct466"]
 [ext_resource type="Script" uid="uid://capmk3cocnl8b" path="res://Scenes/Other/card_layout.gd" id="1_hi3wk"]
@@ -10,10 +10,14 @@ length = 0.4
 [sub_resource type="Animation" id="Animation_0de0k"]
 length = 0.001
 
+[sub_resource type="Animation" id="Animation_ct466"]
+resource_name = "draw_cards"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dmdxi"]
 _data = {
 &"CardPlayed": SubResource("Animation_l1vjk"),
-&"RESET": SubResource("Animation_0de0k")
+&"RESET": SubResource("Animation_0de0k"),
+&"draw_cards": SubResource("Animation_ct466")
 }
 
 [node name="CardLayout" type="Control"]

@@ -10,7 +10,7 @@ signal end_of_turn
 signal UsedCard(CardId:int)
 signal UpdateUI
 
-
+signal EnemyDeafated
 signal PlayerAttacked(damage: int)
 signal Attack_Enemy(damage: int)
 
