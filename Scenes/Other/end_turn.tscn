@@ -22,5 +22,6 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_0xxag")
 theme_override_font_sizes/font_size = 35
 text = "EndTurn"
+flat = true
 
 [connection signal="pressed" from="MarginContainer/Button" to="." method="_on_button_pressed"]

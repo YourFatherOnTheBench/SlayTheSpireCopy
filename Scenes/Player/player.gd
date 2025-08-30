@@ -65,5 +65,7 @@ func Cards(id:int):
 			Globals.Attack_Enemy.emit(damage)
 		
 		100:
-			gainBlock(6)
+			gainBlock(5 + dexterity)
+		101:
+			Globals.DrawCard.emit(1)
 	

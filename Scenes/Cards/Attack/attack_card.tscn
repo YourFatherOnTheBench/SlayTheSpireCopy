@@ -1,9 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://drfycy04j2sg8"]
+[gd_scene load_steps=3 format=3 uid="uid://drfycy04j2sg8"]
 
-[ext_resource type="Texture2D" uid="uid://hreqpys83s0y" path="res://Assets/Cards/Attack.png" id="1_p5d3a"]
+[ext_resource type="Texture2D" uid="uid://btfqjp5pveqvd" path="res://Assets/Cards/Attack_template.png" id="1_77f1k"]
+[ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="2_lalb8"]
 
 [node name="AttackCard" type="TextureRect"]
 offset_right = 40.0
 offset_bottom = 40.0
 pivot_offset = Vector2(96, 0)
-texture = ExtResource("1_p5d3a")
+texture = ExtResource("1_77f1k")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 156.0
+offset_right = 150.0
+offset_bottom = 215.0
+theme_override_fonts/font = ExtResource("2_lalb8")
+theme_override_font_sizes/font_size = 32
+text = "Deal 6 Damage"
+horizontal_alignment = 1
+autowrap_mode = 2

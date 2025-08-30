@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bx00v0b1dcuhl"]
+[gd_scene load_steps=8 format=3 uid="uid://bx00v0b1dcuhl"]
 
 [ext_resource type="Script" uid="uid://1ipwmurf4bsi" path="res://addons/godot_card_layout/layouts/hand_layout/gcard_hand_layout.gd" id="1_ct466"]
 [ext_resource type="Script" uid="uid://capmk3cocnl8b" path="res://Scenes/Other/card_layout.gd" id="1_hi3wk"]
+[ext_resource type="Script" uid="uid://cqux3edrd7xvt" path="res://Scenes/Other/cpu_particles_2d.gd" id="4_bf0sq"]
 
 [sub_resource type="Animation" id="Animation_l1vjk"]
 resource_name = "CardPlayed"
@@ -54,5 +55,19 @@ metadata/_custom_type_script = "uid://1ipwmurf4bsi"
 libraries = {
 &"": SubResource("AnimationLibrary_dmdxi")
 }
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(538, 390)
+emitting = false
+amount = 1
+lifetime = 6.0
+one_shot = true
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector2(0, 0)
+angle_max = 360.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+script = ExtResource("4_bf0sq")
 
 [connection signal="card_dragging_finished" from="GCardHandLayout" to="." method="_Used_Card"]

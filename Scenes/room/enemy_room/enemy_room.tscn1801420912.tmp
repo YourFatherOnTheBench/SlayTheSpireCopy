@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsenqrfhy8qxd"]
+
+[ext_resource type="Texture2D" uid="uid://we1udfk3qslt" path="res://Assets/UI/icons/EnemyIcon.png" id="1_qp6dv"]
+[ext_resource type="Script" uid="uid://co7y4jp0027jd" path="res://Scenes/room/enemy_room/enemy_room.gd" id="2_1jpqe"]
+
+[node name="EnemyRoom" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_qp6dv")
+script = ExtResource("2_1jpqe")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

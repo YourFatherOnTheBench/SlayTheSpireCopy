@@ -1,8 +1,59 @@
-[gd_scene load_steps=9 format=3 uid="uid://bo2wpqyw7mpo0"]
+[gd_scene load_steps=28 format=3 uid="uid://bo2wpqyw7mpo0"]
 
 [ext_resource type="Script" uid="uid://bhjbybh5e4dbh" path="res://Scenes/Enemies/testEnemy/enemy(idk).gd" id="1_cub1t"]
+[ext_resource type="Texture2D" uid="uid://dlkorwhqrp53i" path="res://Assets/SpritesSheets/Enemies/Monsters_Creatures_Fantasy/Mushroom/Attack.png" id="3_k4v5i"]
 [ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="3_oneh6"]
 [ext_resource type="Texture2D" uid="uid://mhka4ajw4dia" path="res://Assets/SpritesSheets/Enemies/Monsters_Creatures_Fantasy/Mushroom/Idle.png" id="3_pgfnj"]
+[ext_resource type="Texture2D" uid="uid://b5bu3i2acqadd" path="res://Assets/SpritesSheets/Enemies/Monsters_Creatures_Fantasy/Mushroom/Death.png" id="4_isp3d"]
+[ext_resource type="Texture2D" uid="uid://b3ohl7c3le3pq" path="res://Assets/SpritesSheets/Enemies/Monsters_Creatures_Fantasy/Mushroom/Take Hit.png" id="6_mw70o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fare"]
+atlas = ExtResource("3_k4v5i")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_huxrx"]
+atlas = ExtResource("3_k4v5i")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3752"]
+atlas = ExtResource("3_k4v5i")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngill"]
+atlas = ExtResource("3_k4v5i")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmpue"]
+atlas = ExtResource("3_k4v5i")
+region = Rect2(600, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62xuo"]
+atlas = ExtResource("3_k4v5i")
+region = Rect2(750, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gv4e"]
+atlas = ExtResource("3_k4v5i")
+region = Rect2(900, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihyn6"]
+atlas = ExtResource("3_k4v5i")
+region = Rect2(1050, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bjbe"]
+atlas = ExtResource("4_isp3d")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q10yv"]
+atlas = ExtResource("4_isp3d")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_net34"]
+atlas = ExtResource("4_isp3d")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl72e"]
+atlas = ExtResource("4_isp3d")
+region = Rect2(450, 0, 150, 150)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tsjws"]
 atlas = ExtResource("3_pgfnj")
@@ -20,8 +71,70 @@ region = Rect2(300, 0, 150, 150)
 atlas = ExtResource("3_pgfnj")
 region = Rect2(450, 0, 150, 150)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnmbc"]
+atlas = ExtResource("6_mw70o")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgqbv"]
+atlas = ExtResource("6_mw70o")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ie0er"]
+atlas = ExtResource("6_mw70o")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bjc1"]
+atlas = ExtResource("6_mw70o")
+region = Rect2(450, 0, 150, 150)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_7fare"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fare")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_huxrx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3752")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngill")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmpue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62xuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gv4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihyn6")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0bjbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q10yv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_net34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pl72e")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 6.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tsjws")
@@ -36,33 +149,62 @@ animations = [{
 "texture": SubResource("AtlasTexture_mw70o")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnmbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgqbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ie0er")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bjc1")
+}],
+"loop": false,
+"name": &"Take_hit",
 "speed": 7.0
 }]
 
-[node name="Enemy(idk)" type="Node2D"]
+[node name="EnemyMushroom" type="Node2D"]
 script = ExtResource("1_cub1t")
+maxHP = 80
+basic_attack = 8
+basic_block = 10
 
 [node name="HP" type="Label" parent="."]
-offset_left = -26.0
-offset_top = 73.0
-offset_right = 27.0
-offset_bottom = 96.0
+offset_left = -35.0
+offset_top = 61.0
+offset_right = 35.0
+offset_bottom = 89.0
 theme_override_fonts/font = ExtResource("3_oneh6")
 theme_override_font_sizes/font_size = 32
+text = "80/80"
 horizontal_alignment = 1
 
+[node name="Icon" type="TextureRect" parent="."]
+offset_left = -43.0
+offset_top = -261.0
+offset_right = 53.0
+offset_bottom = -165.0
+scale = Vector2(0.4, 0.4)
+
 [node name="turn" type="Label" parent="."]
-offset_left = -40.0
+offset_left = 1.0
 offset_top = -254.0
+offset_right = 41.0
 offset_bottom = -227.0
 theme_override_fonts/font = ExtResource("3_oneh6")
 theme_override_font_sizes/font_size = 30
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="animation" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2, -136)
 scale = Vector2(-6, 6)
 sprite_frames = SubResource("SpriteFrames_7fare")
-autoplay = "default"
-frame_progress = 0.510835
+animation = &"Idle"
+autoplay = "Idle"
 metadata/_edit_lock_ = true

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dclhqfrojmq4c"]
+
+[ext_resource type="Texture2D" uid="uid://dy3udqa87t4ga" path="res://Assets/Cards/BlueCards/DrawCard_template.png" id="1_l7g1o"]
+[ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="2_ebqv2"]
+
+[node name="DrawCards_card" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(96, 0)
+texture = ExtResource("1_l7g1o")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 149.0
+offset_right = 151.0
+offset_bottom = 204.0
+theme_override_fonts/font = ExtResource("2_ebqv2")
+theme_override_font_sizes/font_size = 32
+text = "Draw 1 Card"
+horizontal_alignment = 1
+autowrap_mode = 2

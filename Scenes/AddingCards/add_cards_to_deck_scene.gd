@@ -2,10 +2,8 @@ extends CanvasLayer
 
 var rng = RandomNumberGenerator.new()
 
-@onready var btn1: TextureButton = $"MarginContainer/HBoxContainer/1"
-@onready var btn2: TextureButton = $"MarginContainer/HBoxContainer/2"
-@onready var btn3: TextureButton = $"MarginContainer/HBoxContainer/3"
 
+@onready var container: HBoxContainer = $MarginContainer/HBoxContainer
 
 
 func _ready() -> void:
@@ -16,13 +14,15 @@ func _ready() -> void:
 		var cardid = cards[index]
 		var card_scene = Deck.CardsIDs[cardid]
 		var card = card_scene.instantiate()
-		var button_path = "MarginContainer/HBoxContainer/%d" % id
-		var button = get_node(button_path)
-		
-		button.texture_normal = card.texture
+		container.add_child(card)
+		var button = Button.new()
+		card.add_child(button)
+		button.global_position = card.global_position
+		button.size = card.size
+		button.flat = true
 		button.pressed.connect(choosen_card.bind(cardid))
-		button.mouse_entered.connect(hover_card.bind(button))
-		button.mouse_exited.connect(unhover_card.bind(button))
+		button.mouse_entered.connect(hover_card.bind(card))
+		button.mouse_exited.connect(unhover_card.bind(card))
 
 	
 func choosen_card(index: int):

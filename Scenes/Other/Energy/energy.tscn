@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcjakdd00882b"]
+[gd_scene load_steps=4 format=3 uid="uid://bcjakdd00882b"]
 
 [ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="1_58mri"]
 [ext_resource type="Script" uid="uid://dv2plh8sytnvo" path="res://Scenes/Other/Energy/energy.gd" id="1_frtnr"]
+[ext_resource type="Texture2D" uid="uid://bqxmvt0e7wibd" path="res://Assets/UI/icons/manaCircle.png" id="2_cp6pe"]
 
 [node name="Energy" type="CanvasLayer"]
 script = ExtResource("1_frtnr")
+
+[node name="Circle" type="TextureRect" parent="."]
+offset_left = 158.0
+offset_top = 699.0
+offset_right = 222.0
+offset_bottom = 763.0
+texture = ExtResource("2_cp6pe")
 
 [node name="CurrentEnergy" type="Label" parent="."]
 anchors_preset = 2
@@ -16,4 +24,5 @@ offset_right = 209.0
 offset_bottom = -43.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("1_58mri")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 32
+text = "3/3"

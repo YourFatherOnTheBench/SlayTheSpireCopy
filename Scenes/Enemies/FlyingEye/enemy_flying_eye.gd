@@ -21,7 +21,7 @@ var choice: int:
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	HP = maxHP
-	basic_attack = 8 + Strentgh
+	basic_attack += Strentgh
 	$HP.text = str(HP) + "/" + str(maxHP)
 	Globals.Attack_Enemy.connect(take_hit)
 	Globals.end_of_turn.connect(EnemyTurn)
@@ -34,6 +34,10 @@ func EnemyTurn():
 	
 	match choice:
 		1:
+			
+			$AnimatedSprite2D.play("attack")
+			await $AnimatedSprite2D.animation_finished
+			$AnimatedSprite2D.play("idle")
 			Attack_player(basic_attack)
 		2:
 			gain_block(10)

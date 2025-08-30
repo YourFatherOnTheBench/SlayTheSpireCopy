@@ -1,9 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmieqlq78dctb"]
+[gd_scene load_steps=3 format=3 uid="uid://bmieqlq78dctb"]
 
-[ext_resource type="Texture2D" uid="uid://ci4f7jbhncf02" path="res://Assets/Cards/Block.png" id="1_pyxan"]
+[ext_resource type="Texture2D" uid="uid://bde3i5e5g30je" path="res://Assets/Cards/Block_template.png" id="1_hmyig"]
+[ext_resource type="FontFile" uid="uid://7pd1bf7pp0t6" path="res://Assets/m6x11.ttf" id="2_uc6a3"]
 
 [node name="BlockCard" type="TextureRect"]
 offset_right = 40.0
 offset_bottom = 40.0
 pivot_offset = Vector2(96, 0)
-texture = ExtResource("1_pyxan")
+texture = ExtResource("1_hmyig")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.431
+anchor_bottom = 0.334
+offset_left = 48.0
+offset_top = 154.0
+offset_right = 69.248
+offset_bottom = 122.496
+theme_override_fonts/font = ExtResource("2_uc6a3")
+theme_override_font_sizes/font_size = 32
+text = "block 5 damage"
+horizontal_alignment = 1
+autowrap_mode = 2

@@ -5,7 +5,7 @@ class_name Enemy
 
 signal updateHP(value)
 
-var maxHP: int
+@export var maxHP: int
 var HP: int:
 	get:
 		return HP
@@ -14,9 +14,10 @@ var HP: int:
 		$HP.text = str(value) + "/" + str(maxHP)
 		
 		
-var Strentgh: int
-var basic_attack: int
-var block: int = 0:
+@export var Strentgh: int
+@export var basic_attack: int
+@export var basic_block: int
+@export var block: int = 0:
 	get:
 		return block
 	set(value):
@@ -41,6 +42,9 @@ func gain_strentgh(value: int):
 	basic_attack += Strentgh
 
 func take_hit(dmg: int):
+	#$animation.play("Take_hit")
+	#await $animation.animation_finished
+	#$animation.play("Idle")
 	var value = dmg
 	if block > 0:
 		dmg -= block

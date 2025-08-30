@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bosx1hss8v81k"]
+
+[ext_resource type="Script" uid="uid://d1q0h84wmjpjr" path="res://Scenes/Levels/map/map.gd" id="1_p56sy"]
+
+[node name="Map" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p56sy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.668555, 0.642375, 0.597622, 1)
+
+[node name="EnemiesRoom" type="Node2D" parent="."]
+
+[node name="ExplenetionMark" type="Node2D" parent="."]
+
+[node name="Shops" type="Node2D" parent="."]
+
+[node name="elites" type="Node2D" parent="."]

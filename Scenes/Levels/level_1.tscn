@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bx00v0b1dcuhl" path="res://Scenes/Other/card_layout.tscn" id="3_3mqfk"]
 [ext_resource type="PackedScene" uid="uid://cxmnqg7h2v8y8" path="res://Scenes/Other/end_turn.tscn" id="4_iixi8"]
 [ext_resource type="PackedScene" uid="uid://caflt86a831go" path="res://Scenes/Other/Draw_and_Discard.tscn" id="5_5f3p6"]
-[ext_resource type="PackedScene" uid="uid://bo2wpqyw7mpo0" path="res://Scenes/Enemies/testEnemy/enemy(idk).tscn" id="6_5f3p6"]
 [ext_resource type="PackedScene" uid="uid://yhprjoicliiv" path="res://Scenes/Player/player.tscn" id="6_xgxfi"]
+[ext_resource type="PackedScene" uid="uid://2yo8jf5441yr" path="res://Scenes/Enemies/FlyingEye/enemy_flying_eye.tscn" id="7_jv26f"]
 [ext_resource type="PackedScene" uid="uid://bcjakdd00882b" path="res://Scenes/Other/Energy/energy.tscn" id="8_jv26f"]
 
 [node name="Level1" type="Node2D"]
@@ -30,7 +30,7 @@ position = Vector2(316, 606)
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="Enemy(idk)" parent="Enemies" instance=ExtResource("6_5f3p6")]
-position = Vector2(1479, 647)
+[node name="EnemyFlyingEye" parent="Enemies" instance=ExtResource("7_jv26f")]
+position = Vector2(1509, 482)
 
 [node name="Energy" parent="." instance=ExtResource("8_jv26f")]

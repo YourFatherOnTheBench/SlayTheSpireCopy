@@ -14,5 +14,6 @@ signal EnemyDeafated
 signal PlayerAttacked(damage: int)
 signal Attack_Enemy(damage: int)
 
+signal DrawCard(number_of_cards: int)
 
 		
