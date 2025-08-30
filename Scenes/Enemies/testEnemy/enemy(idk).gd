@@ -10,13 +10,14 @@ var choice: int:
 		choice = value
 		match choice:
 			1:
-				$turn.text = str(basic_attack) 
+				$turn.text = "%s" % basic_attack
 				$Icon.texture = load("res://Assets/UI/icons/swordicon.png")
 			2:
-				$turn.text = str(basic_block)
+				$turn.text = "%s" % basic_block
 				$Icon.texture = load("res://Assets/UI/icons/blockicon.png")
 			3:
 				$Icon.texture = load("res://Assets/UI/icons/buff.png")
+				call_deferred("cleartext")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -43,3 +44,6 @@ func EnemyTurn():
 func PlayerTurn():
 	choice = rng.randi_range(1, 3)
 	
+
+func cleartext():
+	$turn.text = ""
