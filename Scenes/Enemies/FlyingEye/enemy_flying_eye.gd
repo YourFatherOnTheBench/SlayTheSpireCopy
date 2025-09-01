@@ -17,6 +17,7 @@ var choice: int:
 				$Icon.texture = load("res://Assets/UI/icons/blockicon.png")
 			3:
 				$Icon.texture = load("res://Assets/UI/icons/buff.png")
+				$turn.text = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -89,3 +89,13 @@ func end_turn():
 	await get_tree().create_timer(1).timeout
 		
 	Globals.start_of_turn.emit()
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed:
+		var key_string = OS.get_keycode_string(event.keycode)
+		if key_string.is_valid_int():
+			var index = int(key_string) - 1
+			if index >= 0 and index < $GCardHandLayout.get_child_count():
+				$GCardHandLayout.hover_by_number = true
+				$GCardHandLayout._set_hovered_index(index)

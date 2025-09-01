@@ -16,6 +16,10 @@ signal card_dragging_started(card:Control, index:int)
 ## Emits when a dragged card is released.
 signal card_dragging_finished(card:Control, index:int)
 
+
+var hover_by_number: bool = false
+
+
 @export_group("idle layout")
 ## Set radius dynamically based on the number of cards. ([member radius] = [member dynamic_radius_factor] * number_of_cards).[br][br]
 ## If [b]true[/b], [member radius] is ignored.
@@ -93,13 +97,14 @@ func _process(delta):
 		_dragging_card.global_position = _get_global_mouse_position_for_interaction() - _dragging_mouse_position
 	elif _mouse_in:
 		assert(enable_hover)
+		hover_by_number = false
 		var mouse_position = _get_global_mouse_position_for_interaction()
 		var new_hover_index := _find_card_index_with_point(mouse_position)
 		if hovered_index != new_hover_index:
 			hovered_index = new_hover_index
-	elif hovered_index != -1:
+	elif hovered_index != -1 and !hover_by_number:
 		hovered_index = -1
-	
+	print(hovered_index)
 func _enter_tree():
 	if is_node_ready() && get_child_count() > 0:
 		_reset_positions_if_in_tree(false, false)
@@ -283,3 +288,8 @@ func _on_child_gui_input(event:InputEvent, card:Control):
 			card_dragging_finished.emit(card, _dragging_index)
 			_dragging_index = -100
 			_reset_positions_if_in_tree()
+
+func hover_card_by_index(index: int):
+	_mouse_in = true
+	_set_hovered_index(index)
+	_reset_positions_if_in_tree(false, true)
