@@ -20,10 +20,11 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.668555, 0.642375, 0.597622, 1)
 
-[node name="EnemiesRoom" type="Node2D" parent="."]
+[node name="Rooms" type="Node2D" parent="."]
 
-[node name="ExplenetionMark" type="Node2D" parent="."]
+[node name="RoomSpawningPoints" type="Node2D" parent="."]
 
-[node name="Shops" type="Node2D" parent="."]
+[node name="1" type="Marker2D" parent="RoomSpawningPoints"]
+position = Vector2(264, 411)
 
-[node name="elites" type="Node2D" parent="."]
+[node name="Lines" type="Node2D" parent="."]

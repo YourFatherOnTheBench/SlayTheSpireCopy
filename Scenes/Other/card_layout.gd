@@ -99,3 +99,5 @@ func _unhandled_input(event: InputEvent) -> void:
 			if index >= 0 and index < $GCardHandLayout.get_child_count():
 				$GCardHandLayout.hover_by_number = true
 				$GCardHandLayout._set_hovered_index(index)
+				#var card = $GCardHandLayout.get_child(index)
+				#card.global_position = get_global_mouse_position()

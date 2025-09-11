@@ -5,6 +5,10 @@ var NumberOfCardsDraw: int = 5
 var CurrentEnergy: int = 3
 var MaxEnergy: int = 3
 
+var MapGenereted: bool = false
+
+
+
 signal start_of_turn
 signal end_of_turn
 signal UsedCard(CardId:int)
@@ -16,4 +20,5 @@ signal Attack_Enemy(damage: int)
 
 signal DrawCard(number_of_cards: int)
 
+signal generateMap()
 		
